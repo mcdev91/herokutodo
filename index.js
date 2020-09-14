@@ -12,6 +12,7 @@ const pool = new Pool({
 });
 
 express()
+  .use('/favicon.ico', express.static('images/shop.ico'))
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
